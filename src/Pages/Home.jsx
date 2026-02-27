@@ -1,6 +1,7 @@
 import React from 'react';
 import assets from '../assets/Pruthvi_2.png';
 import { Github, Linkedin, Twitter, ArrowRight, Download, LinkedinIcon } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
   const handleDownloadResume = () => {
@@ -14,19 +15,19 @@ const Home = () => {
     document.body.removeChild(link);
   };
 
-  const handleViewProjects = () => {
-    // Scroll to projects section or navigate to projects page
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      // If projects section doesn't exist, you can navigate to projects page
-      // window.location.href = '/projects';
-    }
-  };
+  // const handleViewProjects = () => {
+  //   // Scroll to projects section or navigate to projects page
+  //   const projectsSection = document.getElementById('projects');
+  //   if (projectsSection) {
+  //     projectsSection.scrollIntoView({ behavior: 'smooth' });
+  //   } else {
+  //     // If projects section doesn't exist, you can navigate to projects page
+  //     // window.location.href = '/projects';
+  //   }
+  // };
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-slate-50/50 pt-20">
+    <main className="relative min-h-screen overflow-hidden bg-slate-50/50 pt-24 md:pt-28 lg:pt-32">
       {/* Decorative Background Blobs */}
       <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
       <div className="absolute top-0 -right-4 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
@@ -85,7 +86,9 @@ const Home = () => {
             {/* Actions */}
             <div className="flex flex-wrap justify-center gap-4 lg:justify-start mb-12">
               <button 
-                onClick={handleViewProjects}
+               onClick={() => {
+                  window.location.href = "/projects";
+                }}
                 className="group flex items-center gap-2 rounded-full bg-slate-900 px-8 py-4 font-bold text-white transition-all hover:bg-slate-800 hover:shadow-xl active:scale-95"
               >
                 View Projects 
@@ -103,30 +106,23 @@ const Home = () => {
             {/* Socials & Tech Stack */}
             <div className="flex flex-col sm:flex-row items-center gap-8 pt-8 border-t border-slate-200">
               <div className="flex gap-4">
-                <a 
+                <NavLink 
                   href="https://github.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-white shadow-sm border border-slate-100 text-slate-400 hover:text-indigo-600 transition-colors hover:scale-110 transform duration-200"
                 >
                   <Github className="w-5 h-5" />
-                </a>
-                <a 
+                </NavLink>
+                <NavLink 
                   href="https://www.linkedin.com/feed/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-white shadow-sm border border-slate-100 text-slate-400 hover:text-indigo-600 transition-colors hover:scale-110 transform duration-200"
                 >
                   <LinkedinIcon className="w-5 h-5" />
-                </a>
-                {/* <a 
-                  href="https://twitter.com/yourusername" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-full bg-white shadow-sm border border-slate-100 text-slate-400 hover:text-indigo-600 transition-colors hover:scale-110 transform duration-200"
-                >
-                  <Twitter className="w-5 h-5" />
-                </a> */}
+                </NavLink>
+              
               </div>
               <div className="h-px w-12 bg-slate-200 hidden sm:block"></div>
               <div className="flex items-center gap-4 text-slate-400 font-medium grayscale opacity-60">

@@ -13,11 +13,6 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex space-x-6 text-sm">
-            <a href="#" className="text-gray-500 hover:text-indigo-600">Home</a>
-            <a href="#" className="text-gray-500 hover:text-indigo-600">Projects</a>
-            <a href="#" className="text-gray-500 hover:text-indigo-600">Resume</a>
-          </div>
 
           <div className="flex space-x-4">
             {/* Social Icons (Simplified for brevity) */}

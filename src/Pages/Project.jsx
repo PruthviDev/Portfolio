@@ -13,8 +13,8 @@ const Projects = () => {
       longDescription: "Built a modular UI with reusable React components and managed routing with React Router. Utilized Bootstrap Grid System for a professional, responsive layout. Simulated a production environment using JSON Server to handle asynchronous API calls for realtime data fetching. Implemented search, filtering, and dynamic booking functionality with proper state management and seamless user experience.",
       image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tags: ["React", "Bootstrap", "JSON Server", "Axios", "React Router"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+    
+      githubUrl: "https://github.com/PruthviDev/Hotel-Booking-Website.git",
       featured: true,
       stars: 56,
       views: 2.1,
@@ -35,8 +35,8 @@ const Projects = () => {
       longDescription: "Developed a MERN-stack platform featuring Role-Based Access Control for instructors and students. Implemented secure JWT/bcrypt authentication and RESTful API integration using Axios. Integrated Cloudinary for cloud-based media storage and optimized content delivery. Designed responsive UI using Tailwind CSS and implemented course management features such as lecture uploads, enrollment handling, and protected routes for secure access control.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tags: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind", "JWT", "Cloudinary"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+    
+      githubUrl: "https://github.com/PruthviDev/MERN-STACK-LMS-Project-.git",
       featured: true,
       stars: 78,
       views: 2.5,
@@ -56,7 +56,7 @@ const Projects = () => {
       description: "A full-featured e-commerce platform with product management, cart functionality, and payment integration.",
       image: "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tags: ["React", "Redux", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "https://example.com",
+      
       githubUrl: "https://github.com",
       featured: false,
       stars: 42,
@@ -77,7 +77,7 @@ const Projects = () => {
       description: "A modern, customizable portfolio template for developers and designers with smooth animations and dark mode.",
       image: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tags: ["React", "Framer Motion", "Tailwind", "Vite"],
-      liveUrl: "https://example.com",
+      
       githubUrl: "https://github.com",
       featured: false,
       stars: 23,
@@ -105,7 +105,7 @@ const Projects = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">
-            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Projects</span>
+            My <span className="text-transparent bg-clip-text  from-indigo-600 to-purple-600">Projects</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Here are some of my recent projects. Each project is crafted with attention to detail and focus on user experience.

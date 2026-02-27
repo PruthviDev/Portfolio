@@ -17,29 +17,20 @@ const ProjectCard = ({ project, variant = 'default' }) => {
           />
           
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute inset-0  from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           
           {/* Featured Badge */}
           {project.featured && (
             <div className="absolute top-4 left-4">
-              <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white text-xs font-bold rounded-lg shadow-lg">
+              <span className="inline-flex items-center gap-1 px-3 py-1.5  from-yellow-400 to-yellow-500 text-white text-xs font-bold rounded-lg shadow-lg">
                 <Star size={12} className="fill-white" />
                 Featured
               </span>
             </div>
           )}
           
-          {/* Quick Action Icons */}
+          {/* Quick Action Icons - Only GitHub remains */}
           <div className="absolute bottom-4 right-4 flex gap-2 translate-y-20 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-            <a 
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 bg-white/20 backdrop-blur-md rounded-lg hover:bg-white hover:scale-110 transition-all duration-300 text-white hover:text-indigo-600"
-              title="Live Demo"
-            >
-              <ExternalLink size={18} />
-            </a>
             <a 
               href={project.githubUrl}
               target="_blank"
@@ -155,7 +146,7 @@ const ProjectCard = ({ project, variant = 'default' }) => {
             alt={project.title}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="absolute inset-0  from-indigo-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity" />
         </div>
 
         {/* Content - 60% width on desktop */}
@@ -221,22 +212,13 @@ const ProjectCard = ({ project, variant = 'default' }) => {
             </div>
           </div>
 
-          {/* Action Buttons */}
+          {/* Action Buttons - Only GitHub remains */}
           <div className="flex items-center gap-3">
-            <a 
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-2.5 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors"
-            >
-              <ExternalLink size={16} />
-              Live Demo
-            </a>
             <a 
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-2.5 border border-slate-200 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-50 transition-colors"
+              className="flex items-center gap-2 px-6 py-2.5 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors"
             >
               <Github size={16} />
               Source Code
